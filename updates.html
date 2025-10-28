@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SHAHI-GREENTECH — Recent Updates</title>
+  <meta name="description" content="Recent updates in sustainable technology — demo content for SHAHI-GREENTECH." />
+  <style>
+    :root{
+      --bg:#04040b;--text:#eaf8ff;--muted:#98a8b8;--accent:#00eaff;--accent2:#00ff88;--card:#0b1220;--radius:12px;--max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    .bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none}
+    canvas#particles{position:absolute;inset:0;width:100%;height:100%}
+    .bg-image{position:absolute;inset:0;background-position:center center;background-size:cover;opacity:0.22;mix-blend-mode:screen;filter:contrast(1.05) saturate(1.12)}
+    .bg-vignette{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.45));}
+
+    .site{position:relative;z-index:2;max-width:var(--max-width);margin:36px auto;padding:22px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent2),var(--accent));display:grid;place-items:center;color:#001010;font-weight:900}
+    .brand-name{font-weight:900;font-size:18px;background:linear-gradient(90deg,var(--accent2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-weight:700}
+    nav a:hover{color:var(--accent)}
+
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);margin-bottom:18px}
+    h1{margin:0 0 6px 0}
+    .muted{color:var(--muted)}
+
+    .updates-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    @media(max-width:900px){.updates-grid{grid-template-columns:1fr}}
+    .update-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .18s}
+    .update-card:hover{transform:translateY(-6px);box-shadow:0 18px 46px rgba(0,255,136,0.05)}
+    .date{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .title{font-weight:800;margin:0 0 8px 0;color:var(--accent2)}
+    .summary{color:var(--muted);margin:0}
+
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center;padding-bottom:30px}
+    .back{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(0,255,136,0.06);color:var(--accent);text-decoration:none;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="bg-wrap" aria-hidden="true">
+    <canvas id="particles"></canvas>
+    <div id="bgImage" class="bg-image" style="background-image:url('https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1600&q=60')"></div>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <div class="site">
+    <header>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="logo">SG</div>
+        <div>
+          <div class="brand-name">SHAHI-GREENTECH</div>
+          <div style="font-size:12px;color:var(--muted)">Recent updates & developments</div>
+        </div>
+      </div>
+      <nav aria-label="main">
+        <a href="index.html">Home</a>
+        <a href="updates.html">Updates</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Recent Updates in Sustainable Technology</h1>
+      <div class="muted">Below are demo/sample updates you can replace with real sources later.</div>
+    </section>
+
+    <section class="updates-grid" aria-live="polite">
+      <article class="update-card">
+        <div class="date">July 7, 2023</div>
+        <h3 class="title">Perovskite-Silicon Tandem Solar Cells Reach ~30% Efficiency (Demo)</h3>
+        <p class="summary">New tandem cell prototypes combine perovskite and silicon layers to push conversion efficiency while lowering production energy — promising cheaper rooftop solar in the near future.</p>
+      </article>
+
+      <article class="update-card">
+        <div class="date">June 2024</div>
+        <h3 class="title">AI Models Predict Deforestation Hotspots</h3>
+        <p class="summary">Satellite imagery + machine learning enable earlier detection of illegal logging and habitat loss, allowing faster interventions by conservation groups and authorities.</p>
+      </article>
+
+      <article class="update-card">
+        <div class="date">March 28, 2025</div>
+        <h3 class="title">Breakthrough in Recyclable EV Battery Design</h3>
+        <p class="summary">A new battery architecture focuses on modularity and recyclable materials, reducing lifecycle emissions and e-waste from electric vehicles.</p>
+      </article>
+
+      <article class="update-card">
+        <div class="date">February 8, 2024</div>
+        <h3 class="title">Coastal Wave Energy Pilot Launched</h3>
+        <p class="summary">A startup deployed wave-harvesting modules that feed a microgrid for a coastal community, showing stable low-carbon generation during trials.</p>
+      </article>
+
+      <article class="update-card">
+        <div class="date">Early 2025</div>
+        <h3 class="title">Quantum Optimization Helps Grid Dispatch</h3>
+        <p class="summary">Early-stage quantum algorithms demonstrate improved scheduling of renewable resources across a test microgrid, increasing renewable utilization.</p>
+      </article>
+
+      <article class="update-card">
+        <div class="date">Jan 15, 2025</div>
+        <h3 class="title">Open-Source Sensors for Citizen Science</h3>
+        <p class="summary">Communities adopt low-cost air and water quality sensors, feeding public dashboards that improve local planning and response.</p>
+      </article>
+    </section>
+
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <footer>
+      © 2025 <strong>SHAHI-GREENTECH</strong> — Demo updates (replace with your sources)
+    </footer>
+  </div>
+
+  <script>
+    // Use same particle engine but lighter for this page
+    (function(){
+      const canvas = document.getElementById('particles');
+      const ctx = canvas.getContext('2d');
+      let W = canvas.width = innerWidth;
+      let H = canvas.height = innerHeight;
+      const DPR = Math.max(1, window.devicePixelRatio || 1);
+      canvas.width = W * DPR; canvas.height = H * DPR; canvas.style.width = W+'px'; canvas.style.height = H+'px';
+      ctx.scale(DPR, DPR);
+
+      let particles = [];
+      const MAX = Math.min(80, Math.round((W*H)/90000)); // modest
+
+      function rand(min,max){return Math.random()*(max-min)+min}
+
+      function init(){
+        particles = [];
+        for(let i=0;i<MAX;i++){
+          particles.push({
+            x: rand(0,W),
+            y: rand(0,H),
+            r: rand(0.7,2.6),
+            vx: rand(-0.12,0.12),
+            vy: rand(-0.09,0.09),
+            hue: rand(140,190)
+          });
+        }
+      }
+
+      function resize(){
+        W = canvas.width = innerWidth; H = canvas.height = innerHeight;
+        canvas.width = W * DPR; canvas.height = H * DPR; canvas.style.width = W+'px'; canvas.style.height = H+'px';
+        ctx.scale(DPR, DPR);
+        init();
+      }
+      window.addEventListener('resize', resize);
+
+      function render(){
+        ctx.clearRect(0,0,W,H);
+        for(const p of particles){
+          p.x += p.vx; p.y += p.vy;
+          if(p.x < -10) p.x = W + 10;
+          if(p.x > W + 10) p.x = -10;
+          if(p.y < -10) p.y = H + 10;
+          if(p.y > H + 10) p.y = -10;
+
+          const g = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*6);
+          g.addColorStop(0, `hsla(${p.hue},100%,60%,0.14)`);
+          g.addColorStop(0.4, `hsla(${p.hue},80%,50%,0.05)`);
+          g.addColorStop(1, `rgba(0,0,0,0)`);
+          ctx.fillStyle = g;
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r*5,0,Math.PI*2); ctx.fill();
+          ctx.fillStyle = `hsla(${p.hue},100%,60%,0.85)`;
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+        }
+        requestAnimationFrame(render);
+      }
+
+      init(); render();
+    })();
+
+    // parallax bg image
+    (function(){
+      const img = document.getElementById('bgImage');
+      function move(e){
+        const x = (e.clientX / window.innerWidth - 0.5) * 14;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        img.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.02)`;
+      }
+      window.addEventListener('mousemove', move, {passive:true});
+      window.addEventListener('touchmove', (ev)=> move(ev.touches[0] || ev), {passive:true});
+    })();
+  </script>
+</body>
+</html>
